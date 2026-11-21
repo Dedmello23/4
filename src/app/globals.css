@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-ivory: #F8F3E9;
+    --text-chocolate: #34251F;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-ivory);
+    color: var(--text-chocolate);
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #F8F3E9;
+    color: #34251F;
+    font-family: var(--font-dmsans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* When custom cursor is safely active on desktop */
+  html.custom-cursor-active,
+  html.custom-cursor-active body,
+  html.custom-cursor-active button,
+  html.custom-cursor-active a,
+  html.custom-cursor-active [role="button"],
+  html.custom-cursor-active input,
+  html.custom-cursor-active select,
+  html.custom-cursor-active textarea {
+    cursor: none !important;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background-color: #D9A5A5;
+    color: #2A1D18;
+  }
+}
+
+/* Custom romantic scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3EDE2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9A5A5;
+  border-radius: 9999px;
+  border: 2px solid #F3EDE2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7C3349;
+}
+
+/* Ticket perforated scallops */
+.ticket-scallop-left {
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background-color: #F8F3E9;
+  border-radius: 50%;
+  box-shadow: inset -2px 0 3px rgba(52, 37, 31, 0.1);
+  z-index: 10;
+}
+
+.ticket-scallop-right {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background-color: #F8F3E9;
+  border-radius: 50%;
+  box-shadow: inset 2px 0 3px rgba(52, 37, 31, 0.1);
+  z-index: 10;
+}
+
+.ticket-dash-divider {
+  border-left: 2px dashed #C7A66A;
+  opacity: 0.5;
+}
+
+/* Subtle paper texture overlay */
+.paper-grain {
+  background-image: radial-gradient(rgba(52, 37, 31, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(248, 243, 233, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(199, 166, 106, 0.25);
+}
+
+/* Floating animation delays */
+.delay-1000 {
+  animation-delay: 1s;
+}
+.delay-2000 {
+  animation-delay: 2s;
+}
+.delay-3000 {
+  animation-delay: 3s;
+}
+.delay-4000 {
+  animation-delay: 4s;
+}
